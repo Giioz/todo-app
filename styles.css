@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: cadetblue;
+    font-family: sans-serif;
+}
+li {
+    list-style: none;
+}
+.container {
+    width: 100%;
+    padding-top: 200px;
+}
+.form {
+    width: 350px;
+    background-color: rgb(150, 150, 150);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+}
+.form input {
+    width: 300px;
+    border-radius: 15px 0px 0px 15px;
+    border: none;
+    border: 1px solid black;
+    height: 50px;
+    border-right: none;
+}
+.form input::placeholder{
+    color: rgb(92, 88, 88);
+    padding-left: 15px;
+}
+.form input:focus {
+    outline: none;
+}
+.form button {
+    width: 50px;
+    background-color: rgb(167, 204, 235);
+    border: none;
+    border: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+    border-left: none;
+    cursor: pointer;
+}
+ul {
+    width: 350px;
+    background-color: rgb(150, 150, 150);
+    padding: 20px 20px;
+    min-height: 300px;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+ul li {
+    display: flex;
+    padding: 10px 20px;
+    background-color: rgb(72, 176, 192);
+    border-radius: 20px;
+    align-items: center;
+    width: 310px;
+}
+ul li button {
+    border: none;
+    background-color:rgba(252, 0, 13, 0.474);
+    padding: 5px;
+    transition: 0.5s;
+    margin-left: auto;
+}
+
+ul li input {
+    margin-right: 20px;
+}
+
+ul li button:hover {
+    background-color:rgb(252, 0, 13);
+    border-radius: 3px;
+}
+
+.line {
+    text-decoration: line-through;
+}
