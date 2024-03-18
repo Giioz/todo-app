@@ -1,5 +1,6 @@
 let inp = document.getElementById('input')
 let addBtn = document.getElementById('btn')
+let resetBtn = document.getElementById('resetBtn')
 let ul = document.getElementById('ul')
 let values = localStorage.getItem('values') ? JSON.parse(localStorage.getItem('values')) : []
 
@@ -9,14 +10,25 @@ addBtn.addEventListener('click', function(){
         let li = document.createElement('li');
         ul.appendChild(li);
         li.innerHTML = `<input type="checkbox" onclick="checkbox(event)"><span>${inp.value}</span><button id="btn1" onClick="deleteLi(event)">X</button>`;
+
         values.push(`${inp.value}`)
         localStorage.setItem('values', JSON.stringify(values));
-        location.reload()
         inp.value = ""
     }
 })
 
+resetBtn.addEventListener('click', function (){
+    localStorage.clear('values')
+    location.reload()
+
+})
+
+
+
+
+
 function displayNotes(){
+
     values.forEach(item => {
         let li = document.createElement('li');
         ul.appendChild(li);
