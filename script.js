@@ -23,9 +23,10 @@ addBtn.addEventListener('click', function(){
 // ნოუთების ლოკალ სთორიჯიდან მთლიანად გაწმენდის ფუნქციონალი.
 
 resetBtn.addEventListener('click', function (){
-    localStorage.clear('values')
-    location.reload()
-
+    if(values.length != 0){
+        localStorage.clear('values')
+        location.reload()
+    }
 })
 
 // აღწერილი ფუნქცია რომელიც ლოკალ სტორიჯიდან ყველა ნოუთს წერს დოკუმენტში.
